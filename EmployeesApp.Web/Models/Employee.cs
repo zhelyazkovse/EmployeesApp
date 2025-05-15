@@ -1,9 +1,20 @@
-﻿namespace EmployeesApp.Web.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace EmployeesApp.Web.Models
 {
     public class Employee
     {
         public int Id { get; set; }
+
+        [Required(ErrorMessage = "Enter a name")]
+        [Display(Name = "Name", Prompt = "Name")]
         public string Name { get; set; }
-        public string Email { get; set; }
+
+
+
+        [Required(ErrorMessage = "E-mail is a must.")]
+        [EmailAddress(ErrorMessage = "Invalid e-mail.")]
+        [Display(Name = "Email", Prompt = "Email")]
+        public string Email { get; set; } // 
     }
 }

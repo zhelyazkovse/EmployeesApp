@@ -1,9 +1,16 @@
-﻿<!DOCTYPE html>
+﻿@model EmployeesApp.Web.Models.Employee[]
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+<!DOCTYPE html>
     <html>
     <head>
         <title></title>
     </head>
     <body>
+
+        <h2>Employees</h2>
+        Count: <strong>@Model.Length</strong>
 
     <ul>
         @foreach (var employee in Model)
@@ -13,7 +20,7 @@
             </li>
         }
     </ul>
-    <a href="/Create">add an employee</a>
+    <a asp-controller="employees" asp-action="create">Add Employee</a>
 
     
     </body>
