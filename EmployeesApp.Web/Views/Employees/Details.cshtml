@@ -1,0 +1,20 @@
+﻿@model EmployeesApp.Web.Models.Employee
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee Details</title>
+</head>
+<body>
+
+	<h2>@Model.Name</h2>
+
+	<p>ID: @Model.Id</p>
+	<p>Email: @Model.Email</p>
+		
+	<a asp-controller="employees" asp-action="index">Back to Home</a>
+
+</body>
+</html>

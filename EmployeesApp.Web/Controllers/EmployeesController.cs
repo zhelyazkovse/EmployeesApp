@@ -30,5 +30,12 @@ namespace EmployeesApp.Web.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [HttpGet("/Details/{id}")]
+        [Route("/Details/{id:int}")]
+        public IActionResult Details(int id)
+        {
+            var model = service.GetById(id);
+            return View(model);
+        }
     }
 }
