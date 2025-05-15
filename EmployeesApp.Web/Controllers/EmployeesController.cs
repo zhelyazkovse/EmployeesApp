@@ -16,13 +16,13 @@ namespace EmployeesApp.Web.Controllers
         }
 
         [HttpGet("/Create")]
-        public IActionResult CreateEmployee()
+        public IActionResult Create()
         {
             return View();
         }
 
         [HttpPost("/Create")]
-        public IActionResult CreateEmployee( Employee employee)
+        public IActionResult Create( Employee employee)
         {
             service.AddEmployee(employee);
             return RedirectToAction(nameof(Index));
