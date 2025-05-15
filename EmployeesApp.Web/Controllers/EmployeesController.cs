@@ -11,8 +11,7 @@ namespace EmployeesApp.Web.Controllers
         [HttpGet("")]
         public IActionResult Index()
         {
-            var model = service.GetAll();
-            return View(model);
+            return View(service.GetAll());
         }
 
         [HttpGet("/Create")]
