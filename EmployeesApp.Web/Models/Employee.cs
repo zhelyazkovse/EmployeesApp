@@ -8,6 +8,7 @@ namespace EmployeesApp.Web.Models
 
         [Required(ErrorMessage = "Enter a name")]
         [Display(Name = "Name", Prompt = "Name")]
+        [RegularExpression("[a-zA-ZåäöÅÄÖ]*", ErrorMessage = "Write a valid name")]
         public string Name { get; set; }
 
 
